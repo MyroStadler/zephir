@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+/vendor
+/*/.zephir
+/*/ext
+/*/compile.log
+/*/compile-errors.log
+

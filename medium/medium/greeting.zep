@@ -1,10 +1,8 @@
 namespace Medium;
 
-class Greeting
-{
+class Greeting {
 
-    public static function say()
-    {
+    public static function say() {
         echo "hello world!";
     }
 

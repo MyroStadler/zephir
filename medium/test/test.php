@@ -1,3 +1,3 @@
 <?php
 
-echo Medium\Greeting::say2(), "\n";
+echo Medium\Greeting::say(), "\n";

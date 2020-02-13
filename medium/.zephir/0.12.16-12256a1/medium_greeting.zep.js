@@ -39,7 +39,7 @@
                     ],
                     "file": "\/root\/src\/medium\/medium\/greeting.zep",
                     "line": 5,
-                    "last-line": 9,
+                    "last-line": 15,
                     "char": 26
                 }
             ],

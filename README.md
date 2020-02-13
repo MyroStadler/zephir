@@ -48,5 +48,19 @@ echo Utils\Greeting::say(), "\n";
 
 ```bash
 cd utils
+zephir clean
 zephir build
 ```
+
+### Docker
+
+```bash
+docker-compose up -d
+docker-compose exec app bash
+```
+
+The docker container serves the purpose of development server.
+You would work on the source in your IDE and do builds etc. in the container, where the source is mounted in `/root/src`.
+
+The php.ini file to modify when you want to add extensions is `/etc/php.d/custom-php.ini`
+

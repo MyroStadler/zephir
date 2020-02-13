@@ -1,0 +1,11 @@
+version: '2.0'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./.docker/environments/dev/app/Dockerfile
+    volumes:
+      - ./:/root/src
+    ports:
+      - 80:80

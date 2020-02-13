@@ -1,14 +1,26 @@
-## myrostadler/zephir
+# myrostadler/zephir
 
-This is a hard hat area.
+This repository is for developing custom PHP extensions using Zephir.
 
-### Prerequisites
+## Docker
 
-- php with modules: mbstring, xml, dom
-- zephir parser
-- zephir
+```bash
+docker-compose up -d
+docker-compose exec app bash
+```
 
-See https://docs.zephir-lang.com/0.12/en/installation
+The docker container serves the purpose of development server.
+You would work on the source in your IDE and do builds etc. in the container, where the source is mounted in `/root/src`.
+If you want to create a standalone dev server instead of using a docker container, see iinstructions at 
+https://docs.zephir-lang.com/0.12/en/installation
+
+
+## Notes
+
+1. Extension source code goes in a folder with the same name as the module. See namespacing in `*/config.json`
+1. The php.ini file to modify when you want to add extensions is `/etc/php.d/custom-php.ini`
+
+## Common operations
 
 ### Create extension skeleton
 
@@ -17,10 +29,21 @@ zephir init utils
 cd utils
 ```
 
-### Example class
+### Build extension
 
-- Source code goes in a folder with the same name as the module. 
-See namespacing in `*/config.json`
+```bash
+cd utils
+zephir clean
+zephir build
+```
+
+## Tests
+
+This project has plain-php tests, as seen in various "test" folders; TODO: add proper unit testing.
+
+## Code examples
+
+#### Example Zephir-language extension class "Utils\Greeting"
 
 ```php
 // utils/utils/greeting.zep
@@ -36,7 +59,7 @@ class Greeting {
 }
 ```
 
-### Example test
+### Example test file in plain PHP
 
 ```php
 // utils/test/test.php
@@ -44,23 +67,5 @@ class Greeting {
 echo Utils\Greeting::say(), "\n";
 ```
 
-### Build extension
 
-```bash
-cd utils
-zephir clean
-zephir build
-```
-
-### Docker
-
-```bash
-docker-compose up -d
-docker-compose exec app bash
-```
-
-The docker container serves the purpose of development server.
-You would work on the source in your IDE and do builds etc. in the container, where the source is mounted in `/root/src`.
-
-The php.ini file to modify when you want to add extensions is `/etc/php.d/custom-php.ini`
 

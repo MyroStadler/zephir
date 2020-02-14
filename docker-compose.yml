@@ -7,5 +7,3 @@ services:
       dockerfile: ./.docker/environments/dev/app/Dockerfile
     volumes:
       - ./:/root/src
-    ports:
-      - 80:80

@@ -101,5 +101,5 @@ Since we use Zephir to build, if we wanted people to build from source they woul
 While this is not a major problem it is better to offer the extension for download on a CDN somewhere 
 with instructions for enabling it (adding `extension=/path/to/my_extension.so` to `php.ini`).
 
-Note that currently Zephir supports PHP 7.0 - 7.4.
+At the time of writing (Feb. 2020) Zephir supports PHP 7.0 - 7.4.
 

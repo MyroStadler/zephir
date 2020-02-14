@@ -1,6 +1,8 @@
 # myrostadler/zephir
 
-This repository is for developing custom PHP extensions using Zephir. 
+This is my repository for developing custom PHP extensions using Zephir. 
+If you want to use it for your extension development download or fork it and remove all extension folders in the project root 
+(root folders that do not start with a dot) to be replaced with your own. Otherwise build your own repo around the Dockerfile here. 
 
 For more information on Zephir please see the docs: https://docs.zephir-lang.com/
 
